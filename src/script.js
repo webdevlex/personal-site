@@ -99,7 +99,6 @@ document
 	);
 
 function shiftLeft() {
-	// rotateIfLogoNotFacingUser();
 	temporarlyTurnOffPointerEvents();
 
 	const leftProject = getElement('.left-project');
@@ -121,22 +120,21 @@ function rotateIfLogoNotFacingUser() {
 }
 
 function shiftLeftProjectToCenter(leftProject) {
-	leftProject.classList.remove('left-project'); // -----------------------------------------
-	leftProject.classList.add('center-project'); // -----------------------------------------
+	leftProject.classList.remove('left-project');
+	leftProject.classList.add('center-project');
 }
 
 function shiftCenterProjectToRight(centerProject) {
-	centerProject.classList.remove('center-project'); // -----------------------------------------
-	centerProject.classList.add('right-project'); // -----------------------------------------
+	centerProject.classList.remove('center-project');
+	centerProject.classList.add('right-project');
 }
 
 function shiftRightProjectToLeft(rightProject) {
-	rightProject.classList.remove('right-project'); // -----------------------------------------
-	rightProject.classList.add('left-project'); // -----------------------------------------
+	rightProject.classList.remove('right-project');
+	rightProject.classList.add('left-project');
 }
 
 function shiftRight() {
-	// rotateIfLogoNotFacingUser();
 	temporarlyTurnOffPointerEvents();
 
 	const leftProject = getElement('.left-project');
@@ -149,18 +147,18 @@ function shiftRight() {
 }
 
 function shiftLeftProjectToRight(leftProject) {
-	leftProject.classList.remove('left-project'); // -----------------------------------------
-	leftProject.classList.add('right-project'); // -----------------------------------------
+	leftProject.classList.remove('left-project');
+	leftProject.classList.add('right-project');
 }
 
 function shiftCenterProjectToLeft(centerProject) {
-	centerProject.classList.remove('center-project'); // -----------------------------------------
-	centerProject.classList.add('left-project'); // -----------------------------------------
+	centerProject.classList.remove('center-project');
+	centerProject.classList.add('left-project');
 }
 
 function shiftRightProjectToCenter(rightProject) {
-	rightProject.classList.remove('right-project'); // -----------------------------------------
-	rightProject.classList.add('center-project'); // -----------------------------------------
+	rightProject.classList.remove('right-project');
+	rightProject.classList.add('center-project');
 }
 
 function temporarlyTurnOffPointerEvents() {

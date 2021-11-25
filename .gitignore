@@ -2,3 +2,7 @@ node_modules
 dev
 dist
 .cache
+position-generator
+position-generator-with-scale
+package-lock.json
+packale.json
