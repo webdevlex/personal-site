@@ -1,0 +1,134 @@
+@use 'abstracts' as *;
+
+$planet-1-size: 90px;
+$planet-1-rotation: -10deg;
+
+$planet-2-size: 65px;
+$planet-2-rotation: 15deg;
+
+$planet-3-size: 40px;
+$planet-3-rotation: 5deg;
+
+.hero-planets {
+	@include absolute-top;
+	@include center-children-hor;
+	@include width-height-of(100%);
+	pointer-events: none;
+	overflow: hidden;
+
+	.orbit {
+		@include center-children-hor;
+		position: absolute;
+		top: 156px;
+		width: 1200px;
+		height: 450px;
+	}
+
+	.planet {
+		@include center-children-hor;
+		transition: all 0.05s ease;
+		position: absolute;
+	}
+
+	#moon-container {
+		transition: all 50s ease;
+	}
+
+	.planet-img {
+		@include width-height-of(100%);
+		filter: saturate(90%);
+	}
+
+	.waves-container {
+		@include absolute-top-left;
+		@include width-height-of(100%);
+		opacity: 0.5;
+		border-radius: 50%;
+		overflow: hidden;
+
+		.waves {
+			@include absolute-top-left;
+			animation: rotate-planet 5s linear infinite;
+		}
+	}
+}
+
+#planet-1 {
+	@include width-height-of($planet-1-size);
+
+	.waves-container {
+		transform: rotate($planet-1-rotation);
+
+		.waves {
+			width: calc(#{$planet-1-size} * 2);
+		}
+	}
+
+	.planet-ring {
+		position: absolute;
+		top: 32px;
+		left: -36px;
+		width: 167px;
+		transform: rotate($planet-1-rotation);
+	}
+}
+
+#planet-2 {
+	@include width-height-of($planet-2-size);
+
+	.waves-container {
+		transform: rotate($planet-2-rotation);
+
+		.waves {
+			animation: rotate-planet-reverse 5s linear infinite;
+			width: calc(#{$planet-2-size} * 2);
+		}
+	}
+}
+
+#planet-3 {
+	@include width-height-of($planet-3-size);
+
+	.waves-container {
+		transform: rotate($planet-3-rotation);
+		z-index: 1;
+
+		.waves {
+			width: calc(#{$planet-3-size} * 2);
+			animation: rotate-planet 2s linear infinite;
+		}
+	}
+
+	#moon-orbit {
+		@include center-children-hor;
+		position: absolute;
+		width: 65px;
+		height: 20px;
+
+		#blocker {
+			position: absolute;
+			top: 0;
+			height: 13px;
+			width: 45px;
+			overflow: hidden;
+
+			.planet-blocker {
+				position: absolute;
+				top: -10px;
+				left: 2.5px;
+				width: 40px;
+				height: 40px;
+			}
+		}
+
+		#moon {
+			position: absolute;
+			top: 5px;
+			@include width-height-of(15px);
+
+			#moon-img {
+				@include width-height-of(100%);
+			}
+		}
+	}
+}

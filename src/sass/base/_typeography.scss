@@ -1,0 +1,88 @@
+@use 'abstracts' as *;
+
+@font-face {
+	font-family: 'lemon-milk';
+	src: url('./LEMONMILK-Medium.otf');
+	font-style: normal;
+	font-weight: 100;
+}
+
+h1,
+.h1 {
+	font-family: var(--primary-font);
+	text-align: center;
+	letter-spacing: 5px;
+	font-size: 70px;
+	color: white;
+	line-height: 1;
+	margin-inline: 1rem;
+}
+
+h2,
+.h2 {
+	font-family: var(--primary-font);
+	position: relative;
+	text-align: center;
+	letter-spacing: 2px;
+	font-size: var(--section-title-font-size);
+	line-height: 14px;
+	padding: 0 0 15px 0;
+	color: var(--dark);
+	font-size: 30px;
+
+	&::before {
+		width: 40px;
+		height: 2px;
+		content: '';
+		position: absolute;
+		top: 40px;
+		left: 50%;
+		background-color: #efa24b;
+		transform: translateX(-50%);
+	}
+}
+
+h3,
+.h3 {
+	margin-inline: auto;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.22;
+	letter-spacing: 1px;
+	font-family: var(--secondary-font);
+	margin-top: 20px;
+	text-align: center;
+	color: var(--dark);
+}
+
+h4,
+.h4 {
+	margin-inline: auto;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 1.22;
+	letter-spacing: 1px;
+	font-family: var(--secondary-font);
+	margin-top: 20px;
+	margin-bottom: 5px;
+	text-align: center;
+	color: var(--dark);
+}
+
+p,
+.p {
+	margin-top: 18px;
+	font-family: var(--secondary-font);
+	font-size: 14px;
+	line-height: 1.73;
+	letter-spacing: 0.5px;
+	color: #626881;
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+	h1,
+	.h1 {
+		font-size: 80px;
+	}
+}

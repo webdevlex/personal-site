@@ -1,0 +1,46 @@
+@use '../abstracts' as *;
+
+header {
+	@include absolute-top;
+	@include center-children-hor;
+	width: 100vw;
+	height: var(--header-height);
+	z-index: 2;
+
+	.navbar {
+		@include space-hor;
+		width: min(100%, 1000px);
+		padding-inline: 20px;
+
+		.logo-container {
+			height: 20px;
+			.logo {
+				height: 100%;
+			}
+		}
+
+		.navbar-menu {
+			@include center-children-hor;
+			@include fixed-fill;
+			background-color: #f7f7f7;
+			opacity: 0;
+			pointer-events: none;
+			transition: all 0.3s ease-in-out;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	header .navbar .navbar-menu {
+		position: static;
+		display: block;
+		background-color: transparent;
+		opacity: 1;
+		pointer-events: all;
+		transition: none;
+
+		.nav-buttons-wrapper {
+			display: flex;
+		}
+	}
+}

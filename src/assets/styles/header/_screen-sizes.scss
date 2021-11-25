@@ -1,0 +1,31 @@
+@media (min-width: 992px) {
+	header .header-container .nav-wrapper .navbar {
+		.navbar-menu {
+			position: static;
+			display: block;
+			background-color: transparent;
+			opacity: 1;
+			transition: none;
+			pointer-events: all;
+
+			.nav-buttons-wrapper {
+				display: flex;
+
+				.nav-button {
+					margin-left: 1.5rem;
+					margin-top: 0;
+					color: white;
+					font-weight: 500;
+
+					&:first-child {
+						margin-left: 0;
+					}
+				}
+			}
+		}
+
+		.open-menu-button-wrapper {
+			display: none;
+		}
+	}
+}

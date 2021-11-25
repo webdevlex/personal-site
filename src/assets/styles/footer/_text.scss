@@ -1,0 +1,53 @@
+.footer-text {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+
+	.footer-text-container {
+		max-width: 800px;
+		text-align: center;
+		margin-inline: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 10rem;
+
+		p {
+			color: white;
+			font-size: 4rem;
+			font-family: 'Playfair Display', serif;
+			font-weight: 700;
+			letter-spacing: 2px;
+		}
+
+		button {
+			width: 220px;
+			height: 50px;
+			border-radius: 25px;
+			font-family: Montserrat, sans-serif;
+			background-color: rgb(245, 164, 14);
+			font-weight: 600;
+			text-decoration: none;
+			border: none;
+			color: white;
+			box-sizing: border-box;
+			margin-top: 2rem;
+
+			letter-spacing: 1.54px;
+			text-transform: uppercase;
+			cursor: pointer;
+			transition: all 0.5s;
+			white-space: nowrap;
+
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
+	}
+}

@@ -1,0 +1,84 @@
+@use 'abstracts' as *;
+
+section.home-footer,
+.footer-bg-swirls,
+.swirls,
+.footer-stars-container,
+.footer-stars,
+.footer-wave-container,
+.footer-wave {
+	@include keep-centered-in-parent;
+	height: 800px;
+	max-width: 3000px;
+}
+
+section.home-footer {
+	position: relative;
+	background-image: var(--gradient);
+}
+
+.footer-bg-swirls {
+	@include width-height-of(100%);
+	position: absolute;
+	overflow-x: hidden;
+
+	.swirls {
+		bottom: 0;
+		opacity: 0.08;
+	}
+}
+
+.footer-stars-container {
+	@include width-height-of(100%);
+	overflow-x: hidden;
+}
+
+.footer-text {
+	@include center-children-hor;
+	@include width-height-of(100%);
+	position: absolute;
+	z-index: 1;
+}
+
+.footer-text-container {
+	@include center-children-vir;
+	max-width: 800px;
+	text-align: center;
+	margin-inline: auto;
+	margin-top: 12rem;
+}
+
+.footer-heading {
+	color: white;
+	line-height: 2.5rem;
+	font-size: 25px;
+	font-family: var(--primary-font);
+	font-weight: 700;
+	letter-spacing: 2px;
+	padding-inline: 1rem;
+}
+
+.footer-sub-heading {
+	color: white;
+	font-size: 15px;
+	font-family: var(--secondary-font);
+	font-weight: 400;
+	padding-inline: 2rem;
+}
+
+.btn-default {
+	margin-top: 2rem;
+}
+
+.footer-wave-container {
+	@include width-height-of(100%);
+	transform: translateX(-50%) translateY(-1px);
+	overflow-x: hidden;
+}
+
+@media (min-width: 576px) {
+	.footer-heading {
+		line-height: 3.5rem;
+		font-size: 40px;
+	}
+}

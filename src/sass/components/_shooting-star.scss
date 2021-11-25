@@ -1,0 +1,33 @@
+.shooting-star-container {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	width: 2000px;
+	height: 20px;
+}
+
+.shooting-star {
+	position: absolute;
+	height: 10px;
+	right: 0;
+}
+
+.container-1 {
+	right: 100px;
+	top: 420px;
+	transform: rotate(-30deg);
+
+	.shooting-star {
+		animation: shooting-star 60s linear 15s infinite;
+	}
+}
+
+.container-2 {
+	left: -100px;
+	top: 280px;
+	transform: rotate(-20deg);
+
+	.shooting-star {
+		animation: shooting-star 60s linear 5s infinite;
+	}
+}

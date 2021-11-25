@@ -1,0 +1,68 @@
+section.home-about {
+	padding-bottom: 188px;
+	padding-top: var(--sections-padding-block);
+
+	.home-about-container {
+		max-width: 1200px;
+		margin-inline: auto;
+		width: 100%;
+		padding-right: 80px;
+		padding-left: 80px;
+
+		.about-and-title-container {
+			.section-title {
+				position: relative;
+				text-align: center;
+				font-size: var(--section-title-font-size);
+				line-height: 1.06;
+				padding: 0 0 15px;
+				color: #212529;
+				@include title-line;
+			}
+			.info-and-portrait-container {
+				display: flex;
+				justify-content: space-between;
+				margin-top: 4rem;
+
+				.left {
+					height: fit-content;
+					margin-block: auto;
+
+					h3 {
+						margin-inline: auto;
+						font-weight: 600;
+						font-size: 24px;
+						line-height: 1.22;
+						letter-spacing: 1px;
+						font-family: Montserrat, sans-serif;
+						margin-top: 20px;
+					}
+					p {
+						width: 100%;
+						padding-right: 100px;
+						margin-top: 18px;
+						font-family: Lora, serif;
+						font-size: 15px;
+						letter-spacing: 0.5px;
+						color: #626881;
+						height: fit-content;
+
+						line-height: 2.5rem;
+					}
+				}
+
+				.img-container {
+					min-width: 600px;
+					width: 600px;
+					display: flex;
+
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@import './screen-sizes';

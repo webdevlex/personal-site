@@ -1,0 +1,16 @@
+.footer-wave-container {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+
+	.footer-wave {
+		width: 3000px;
+		height: 800px;
+		left: 50%;
+		transform: translateX(-50%);
+		position: absolute;
+	}
+}

@@ -1,0 +1,13 @@
+.hero-bg-swirls {
+	position: absolute;
+	top: 0px;
+	width: 3000px;
+	height: 880px;
+	left: 50%;
+	transform: translateX(-50%);
+	pointer-events: none;
+
+	img {
+		opacity: 8%;
+	}
+}
