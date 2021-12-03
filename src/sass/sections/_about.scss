@@ -24,6 +24,18 @@ section.home-about {
 	margin-top: 40px;
 }
 
+.about-site-and-logos-container {
+	@include center-children-hor;
+	display: flex;
+	flex-direction: column;
+	margin-top: 250px;
+}
+
+.right {
+	@include center-children-vir;
+	margin-top: 40px;
+}
+
 .about-desc-title {
 	text-align: left;
 	font-size: 20px;
@@ -80,6 +92,18 @@ section.home-about {
 		margin-block: 0;
 	}
 
+	.about-site-and-logos-container {
+		flex-direction: row;
+		margin-top: 180px;
+	}
+
+	.right {
+		padding-left: 100px;
+		text-align: center;
+		width: 100%;
+		margin-block: 0;
+	}
+
 	.resume-btn {
 		align-self: start;
 	}
@@ -96,6 +120,6 @@ section.home-about {
 
 	.img-container {
 		min-width: 200px;
-		width: 100%;
+		width: 80%;
 	}
 }

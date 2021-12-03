@@ -1,7 +1,7 @@
 {
-  "name": "portfolio",
+  "name": "personal-site",
   "version": "1.0.0",
-  "description": "Personal Portfolio",
+  "description": "Personal website",
   "main": "index.js",
   "scripts": {
     "dev": "parcel ./src/index.html ./src/hello.html --out-dir ./dev",
