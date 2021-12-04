@@ -5599,10 +5599,7 @@ function showMoon(index) {
 }
 
 function resetOrIncrementIndex(positionIndex, arrayLength) {
-	if (positionIndex >= arrayLength) {
-		return 0;
-	}
-	return positionIndex + 1;
+	return positionIndex >= arrayLength ? 0 : ++positionIndex;
 }
 
 var stop = false;
@@ -5630,24 +5627,22 @@ function animate() {
 
 	if (elapsed > fpsInterval) {
 		then = now - (elapsed % fpsInterval);
-		positions.forEach(
-			({ id, positionIndex, positionsArray }, index, array) => {
-				let x = positionsArray[positionIndex].x;
-				let y = positionsArray[positionIndex].y;
+		positions.forEach(({ id, positionIndex, positionsArray }, index, array) => {
+			let x = positionsArray[positionIndex].x;
+			let y = positionsArray[positionIndex].y;
 
-				if (positionIndex === 0 && id === 'moon') {
-					showMoon(index);
-				} else if (positionIndex === 80 && id == 'moon') {
-					hideMoon(index);
-				}
-
-				moveCircle(index, x, y);
-
-				array[index].positionIndex = resetOrIncrementIndex(
-					positionIndex,
-					arrayLengths[index]
-				);
+			if (positionIndex === 0 && id === 'moon') {
+				showMoon(index);
+			} else if (positionIndex === 80 && id == 'moon') {
+				hideMoon(index);
 			}
-		);
+
+			moveCircle(index, x, y);
+
+			array[index].positionIndex = resetOrIncrementIndex(
+				positionIndex,
+				arrayLengths[index]
+			);
+		});
 	}
 }
