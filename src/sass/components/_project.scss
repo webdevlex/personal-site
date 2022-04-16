@@ -19,7 +19,8 @@
 	background: transparent;
 
 	.logo-container {
-		@include width-height-of(50%);
+		@include width-height-of(60%);
+		@include center-children-hor;
 		position: absolute;
 		pointer-events: none;
 		transform: translateZ(var(--z-offset));
@@ -28,6 +29,10 @@
 
 		.logo {
 			@include width-height-of(100%);
+		}
+
+		.virtical-logo{
+			height: 100%;
 		}
 	}
 
@@ -172,7 +177,7 @@
 		}
 
 		.project-rotater {
-			box-shadow: 0px 0px 50px 10px rgba(40, 40, 40, 0.05);
+			box-shadow: 0px 0px 50px 10px rgba(40, 40, 40, 0.1);
 		}
 
 		.left-project,
@@ -294,6 +299,7 @@
 		.tool {
 			.tool-logo .logo {
 				height: 0.03em;
+				
 			}
 
 			.tool-name {
@@ -310,4 +316,19 @@
 			height: 3.2em;
 		}
 	}
+}
+
+@media (min-width: 1920px) {
+	.back{
+		font-size: 1920px;
+	}
+
+	.project .logo-container, .project .back::before, .project-rotater::before  {
+		transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 134.4, 1);
+	}
+
+	.back{
+		transform: rotateY(180deg) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 134.4, 1);
+	}
+
 }
