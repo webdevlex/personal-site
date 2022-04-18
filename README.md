@@ -11,6 +11,7 @@ This is my personal website and portfolio. Art was created using figma.
 - CSS
 - Sass
 - Parcel
+- Figma
 
 ## Authors
 
