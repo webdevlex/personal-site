@@ -12,6 +12,7 @@ This is my personal website and portfolio, all art created using figma.
 - Sass
 - Parcel
 
+
 ## Authors
 
 **Alexis Martin**
