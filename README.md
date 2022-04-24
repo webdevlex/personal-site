@@ -1,6 +1,6 @@
 ## **Personl Website**
 
-This is my personal website and portfolio, all art created using figma.
+This is my personal website and portfolio
 
 <img src="./src/assets/images/homepage.jpeg" alt="homepage" width="800"/>
 
@@ -11,6 +11,7 @@ This is my personal website and portfolio, all art created using figma.
 - CSS
 - Sass
 - Parcel
+- Figma
 
 
 ## Authors
