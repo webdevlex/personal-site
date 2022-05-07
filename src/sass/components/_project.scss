@@ -21,6 +21,7 @@
 	.logo-container {
 		@include width-height-of(60%);
 		@include center-children-hor;
+		
 		position: absolute;
 		pointer-events: none;
 		transform: translateZ(var(--z-offset));
@@ -29,6 +30,11 @@
 
 		.logo {
 			@include width-height-of(100%);
+			
+		}
+
+		.mf-logo{
+			width: 100%;
 		}
 
 		.virtical-logo{
