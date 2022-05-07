@@ -21,3 +21,15 @@ section.home-projects {
 		}
 	}
 }
+
+.purple-bar::before{
+		background-color: var(--purple);
+}
+
+.orange-bar::before{
+	background-color: var(--orange);
+}
+
+.pink-bar::before{
+	background-color: var(--pink);
+}
