@@ -131,7 +131,7 @@ select {
 }
 @font-face {
   font-family: "lemon-milk";
-  src: url("/LEMONMILK-Medium.5ba7c2c7.otf");
+  src: url("--out-dir/LEMONMILK-Medium.5ba7c2c7.otf");
   font-style: normal;
   font-weight: 100;
 }
@@ -1921,4 +1921,4 @@ section.home-skills .home-skills-container .skills-and-title-container {
   margin: 0 auto;
 }
 
-/*# sourceMappingURL=/style.500aa19d.css.map */
+/*# sourceMappingURL=--out-dir/style.500aa19d.css.map */
