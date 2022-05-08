@@ -45,6 +45,7 @@ $planet-3-rotation: 5deg;
 		opacity: 0.5;
 		border-radius: 50%;
 		overflow: hidden;
+		background-color: rgba(0,0,0,0.01);
 
 		.waves {
 			@include absolute-top-left;
