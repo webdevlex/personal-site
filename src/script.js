@@ -1,6 +1,86 @@
 // Scrolls to top on landing or refresh
 window.scrollTo(0, 0);
 
+// Experimental
+let testButton = document.querySelector('.test-button-down');
+testButton.addEventListener('click', () => getAllSectionPositions());
+
+function getAllSectionPositions() {
+	const atHeroBottom = getHeroPosition();
+	const atSkillsBottom = getSkillsPosition();
+	const atProjectsBottom = getProjectsPosition();
+	const atAboutBottom = getAboutPosition();
+	const atFooterBottom = getFooterPosition();
+
+	if (atFooterBottom) {
+		alert('cant scroll');
+	} else if (atAboutBottom) {
+		const footer = document.querySelector('.home-footer');
+		footer.scrollIntoView({ behavior: 'smooth' });
+	} else if (atProjectsBottom) {
+		const about = document.querySelector('.home-about');
+		about.scrollIntoView({ behavior: 'smooth' });
+	} else if (atSkillsBottom) {
+		const projects = document.querySelector('.home-projects');
+		projects.scrollIntoView({ behavior: 'smooth' });
+	} else if (atHeroBottom) {
+		const skills = document.querySelector('.home-skills');
+		skills.scrollIntoView({ behavior: 'smooth' });
+	}
+}
+
+function getHeroPosition() {
+	const hero = document.querySelector('.home-hero');
+	const rect = hero.getBoundingClientRect();
+	console.log(`-- Home -- \nTop: ${rect.top}\nBottom: ${rect.bottom}`);
+	const bottomPos = rect.bottom - window.innerHeight;
+	const hitBottom = bottomPos <= 0 && bottomPos >= -100;
+	return hitBottom;
+}
+
+function getSkillsPosition() {
+	const skills = document.querySelector('.home-skills');
+	const rect = skills.getBoundingClientRect();
+	console.log(`-- Skills -- \nTop: ${rect.top}\nBottom: ${rect.bottom}`);
+	const bottomPos = rect.bottom - window.innerHeight;
+	const hitBottom = bottomPos <= 0 && bottomPos >= -100;
+	return hitBottom;
+}
+
+function getProjectsPosition() {
+	const projects = document.querySelector('.home-projects');
+	const rect = projects.getBoundingClientRect();
+	console.log(`-- Projects -- \nTop: ${rect.top}\nBottom: ${rect.bottom}`);
+	const bottomPos = rect.bottom - window.innerHeight;
+	const hitBottom = bottomPos <= 0 && bottomPos >= -100;
+	return hitBottom;
+}
+
+function getAboutPosition() {
+	const about = document.querySelector('.home-about');
+	const rect = about.getBoundingClientRect();
+	console.log(`-- About -- \nTop: ${rect.top}\nBottom: ${rect.bottom}`);
+	const bottomPos = rect.bottom - window.innerHeight;
+	const hitBottom = bottomPos <= 0 && bottomPos >= -100;
+	return hitBottom;
+}
+
+function getFooterPosition() {
+	const footer = document.querySelector('.home-footer');
+	const rect = footer.getBoundingClientRect();
+	console.log(`-- Footer -- \nTop: ${rect.top}\nBottom: ${rect.bottom}`);
+	const bottomPos = rect.bottom - window.innerHeight;
+	const hitBottom = bottomPos <= 0 && bottomPos >= -100;
+	return hitBottom;
+}
+
+function getPageTopPosition() {
+	let element = document.getElementsByTagName('body')[0];
+	var rect = element.getBoundingClientRect();
+	return rect.top;
+	// console.log(rect.top, rect.right, rect.bottom, rect.left);
+}
+
 // helpers
 function getElement(className) {
 	return document.querySelector(className);
@@ -121,18 +201,18 @@ function rotateIfLogoNotFacingUser() {
 }
 
 function shiftLeftProjectToCenter(leftProject) {
-	leftProject.classList.remove('left-project'); // -----------------------------------------
-	leftProject.classList.add('center-project'); // -----------------------------------------
+	leftProject.classList.remove('left-project');
+	leftProject.classList.add('center-project');
 }
 
 function shiftCenterProjectToRight(centerProject) {
-	centerProject.classList.remove('center-project'); // -----------------------------------------
-	centerProject.classList.add('right-project'); // -----------------------------------------
+	centerProject.classList.remove('center-project');
+	centerProject.classList.add('right-project');
 }
 
 function shiftRightProjectToLeft(rightProject) {
-	rightProject.classList.remove('right-project'); // -----------------------------------------
-	rightProject.classList.add('left-project'); // -----------------------------------------
+	rightProject.classList.remove('right-project');
+	rightProject.classList.add('left-project');
 }
 
 function shiftRight() {
@@ -149,18 +229,18 @@ function shiftRight() {
 }
 
 function shiftLeftProjectToRight(leftProject) {
-	leftProject.classList.remove('left-project'); // -----------------------------------------
-	leftProject.classList.add('right-project'); // -----------------------------------------
+	leftProject.classList.remove('left-project');
+	leftProject.classList.add('right-project');
 }
 
 function shiftCenterProjectToLeft(centerProject) {
-	centerProject.classList.remove('center-project'); // -----------------------------------------
-	centerProject.classList.add('left-project'); // -----------------------------------------
+	centerProject.classList.remove('center-project');
+	centerProject.classList.add('left-project');
 }
 
 function shiftRightProjectToCenter(rightProject) {
-	rightProject.classList.remove('right-project'); // -----------------------------------------
-	rightProject.classList.add('center-project'); // -----------------------------------------
+	rightProject.classList.remove('right-project');
+	rightProject.classList.add('center-project');
 }
 
 function temporarlyTurnOffPointerEvents() {
