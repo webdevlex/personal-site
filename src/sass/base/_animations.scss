@@ -38,19 +38,6 @@
 	}
 }
 
-// Contact slide out window
-.show-bg {
-	opacity: 0.5 !important;
-	pointer-events: all !important;
-}
-
-.slide-in {
-	transform: translateX(0);
-	pointer-events: all !important;
-	right: auto !important;
-	opacity: 1 !important;
-}
-
 // Stars
 @keyframes shooting-star {
 	0% {

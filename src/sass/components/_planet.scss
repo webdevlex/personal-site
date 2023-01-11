@@ -2,12 +2,22 @@
 
 $planet-1-size: 90px;
 $planet-1-rotation: -10deg;
+$planet-1-starting-x: -459.6266658713869px;
+$planet-1-starting-y: 144.62721217947134px;
 
 $planet-2-size: 65px;
 $planet-2-rotation: 15deg;
+$planet-2-starting-x: 600px;
+$planet-2-starting-y: 0px;
 
 $planet-3-size: 40px;
 $planet-3-rotation: 5deg;
+$planet-3-starting-x: -104.18890660020804px;
+$planet-3-starting-y: -221.5817444277435px;
+
+$moon-starting-x: 32.5px;
+$moon-starting-y: 0px;
+
 
 .hero-planets {
 	@include absolute-top;
@@ -56,6 +66,7 @@ $planet-3-rotation: 5deg;
 
 #planet-1 {
 	@include width-height-of($planet-1-size);
+	transform:translate($planet-1-starting-x, $planet-1-starting-y);
 
 	.waves-container {
 		transform: rotate($planet-1-rotation);
@@ -76,6 +87,7 @@ $planet-3-rotation: 5deg;
 
 #planet-2 {
 	@include width-height-of($planet-2-size);
+	transform:translate($planet-2-starting-x, $planet-2-starting-y);
 
 	.waves-container {
 		transform: rotate($planet-2-rotation);
@@ -89,6 +101,7 @@ $planet-3-rotation: 5deg;
 
 #planet-3 {
 	@include width-height-of($planet-3-size);
+	transform:translate($planet-3-starting-x, $planet-3-starting-y);
 
 	.waves-container {
 		transform: rotate($planet-3-rotation);
@@ -126,6 +139,7 @@ $planet-3-rotation: 5deg;
 			position: absolute;
 			top: 5px;
 			@include width-height-of(15px);
+			transform:translate($moon-starting-x, $moon-starting-y);
 
 			#moon-img {
 				@include width-height-of(100%);
