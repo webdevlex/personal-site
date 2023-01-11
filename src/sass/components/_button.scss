@@ -46,6 +46,11 @@
 	text-align: center;
 	padding-block: 0.75rem;
 	cursor: pointer;
+	transition: color 0.2s ease-in-out;
+
+	&:hover{
+		color: var(--pink);
+	}
 }
 
 .mobile-menu-button {
