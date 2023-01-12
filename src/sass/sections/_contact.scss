@@ -48,8 +48,8 @@ section.home-contact-container {
 }
 
 .hide-contact {
-	transform: translateX(calc(40vw));
-	
+	transform: translateX(40vw);
+	opacity: 0.1
 }
 
 .show-bg {
@@ -63,7 +63,6 @@ section.home-contact-container {
 	pointer-events: all !important;
 	right: auto !important;
 }
-
 
 .close-contact-button {
 	@include center-children-hor;
