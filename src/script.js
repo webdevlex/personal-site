@@ -12,6 +12,8 @@ setTimeout(test, 6000);
 function test() {
 	document.querySelector('.intro-container').remove();
 	toggleLockScroll();
+	toggleSlideIn();
+	toggleSlideIn();
 }
 
 // Setup mobile menu button to open on click
