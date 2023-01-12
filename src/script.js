@@ -6,6 +6,14 @@ function getElement(className) {
 	return document.querySelector(className);
 }
 
+toggleLockScroll();
+setTimeout(test, 6000);
+
+function test() {
+	document.querySelector('.intro-container').remove();
+	toggleLockScroll();
+}
+
 // Setup mobile menu button to open on click
 const mobileMenuButton = getElement('.mobile-menu-button');
 mobileMenuButton.addEventListener('click', () => toggleMenu());
@@ -233,6 +241,25 @@ function getViewportWidth() {
 		window.innerWidth || 0
 	);
 }
+// Sections fade-in on scroll
+const fadeInOptions = {
+	root: null,
+	threshold: 0.1,
+	rootMargin: '-150px',
+};
+
+const fadeInObserver = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		const alreadyFadedIn = entry.target.classList.contains('section-fade-in');
+		if (entry.isIntersecting && !alreadyFadedIn) {
+			console.log(entry);
+			entry.target.classList.add('section-fade-in');
+		}
+	});
+}, fadeInOptions);
+
+const fadeInSection = document.querySelectorAll('.section-fade');
+fadeInSection.forEach((el) => fadeInObserver.observe(el));
 
 // Setup up bottom right contact button to show when no other contact buttons are on screen
 const intersectionButtons = document.querySelectorAll('.intersection');
@@ -240,7 +267,7 @@ const contactButton = getElement('.contact-button');
 
 const options = {
 	root: null,
-	threshhold: 0,
+	threshold: 0,
 	rootMargin: '0px',
 };
 

@@ -4,6 +4,7 @@ section.home-hero {
 	@include keep-centered-in-parent;
 	@include center-children-hor;
 	overflow-x: hidden;
+    overflow-y: hidden;
 	position: relative;
 	max-width: var(--hero-width);
 	height: var(--hero-height);
@@ -12,6 +13,9 @@ section.home-hero {
 
 .hero-text {
 	z-index: 1;
+	opacity: 0;
+    transform: translateY(20px);
+    animation: fade-in-up 1s ease-in-out 4.5s forwards;
 
 	.sub-heading {
 		font-family: var(--secondary-font);
@@ -27,3 +31,98 @@ section.home-hero {
 		margin: 0px auto 150px auto;
 	}
 }
+
+// Logo animation
+.intro-container{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 3;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.2);
+	animation: fade-out 0.4s ease-in-out forwards;
+	animation-delay: 3.2s;
+}
+
+.animated-logo-container{
+    position: relative;
+    width: 300px;
+    height: 134px;
+    animation: shrink 0.4s ease-in-out forwards;
+    animation-delay: 3s;
+	margin-bottom: 100px;
+}
+
+.animated-logo{
+    opacity: 0;
+	width: 300px;
+    filter: blur(10px);
+    animation: logo-flash 0.8s ease-in-out;
+    animation-delay: 2s;
+}
+
+.pillar-container{
+    position: absolute;
+    overflow: hidden;
+    width: 35px;
+    height: 150px;
+    border-radius: 50px;
+}
+
+.pillar-filler{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -150px;
+    border-radius: 50px;
+}
+
+.pillar-1{
+    left: -9px;
+    bottom: 2px;
+    transform-origin: center bottom;
+    transform: rotate(30deg);
+}
+
+.filler-1{
+    animation: grow 0.6s ease-in-out forwards;
+    animation-delay: var(--animation-start);
+}
+
+.pillar-2{
+    transform: rotate(150deg);
+    left: 87px;
+    top: -8px;
+}
+
+.filler-2{
+    animation: grow 0.3s ease-in-out forwards;
+    animation-delay: calc(var(--animation-start) + 0.6s);
+}
+
+.pillar-3{
+    transform: rotate(150deg);
+    left: 160px;
+    top: -8px;
+}
+
+.filler-3{
+    animation: grow 0.3s ease-in-out forwards;
+    animation-delay: calc(var(--animation-start) + 0.7s);
+}
+
+.pillar-4{
+    transform: rotate(150deg);
+    left: 236px;
+    top: -8px;
+}
+
+.filler-4{
+    animation: grow 0.3s ease-in-out forwards;
+    animation-delay: calc(var(--animation-start) + 0.8s);
+}
+
+

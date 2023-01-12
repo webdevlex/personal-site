@@ -57,6 +57,23 @@
 		<link rel="stylesheet" href="./sass/style.scss" />
 	</head>
 	<body>
+		<div class="intro-container">
+			<div class="animated-logo-container">
+				<img src="./assets/images/logo.svg" class="animated-logo" alt="" />
+				<div class="pillar-container pillar-1">
+					<div class="pillar-filler filler-1"></div>
+				</div>
+				<div class="pillar-container pillar-2">
+					<div class="pillar-filler filler-2"></div>
+				</div>
+				<div class="pillar-container pillar-3">
+					<div class="pillar-filler filler-3"></div>
+				</div>
+				<div class="pillar-container pillar-4">
+					<div class="pillar-filler filler-4"></div>
+				</div>
+			</div>
+		</div>
 		<!----- Contact Button ( Bottom Right )----->
 		<section class="home-contact-button">
 			<button class="contact-button contact-btn">
@@ -73,10 +90,12 @@
 
 				<div class="navbar-menu">
 					<ul role="list" class="nav-buttons-wrapper">
-						<li class="nav-button" id="skills">Skills</li>
-						<li class="nav-button" id="projects">Projects</li>
-						<li class="nav-button" id="about">About</li>
-						<li class="nav-button contact-btn" id="contact">Contact</li>
+						<li class="nav-button fade-in-down-1" id="skills">Skills</li>
+						<li class="nav-button fade-in-down-2" id="projects">Projects</li>
+						<li class="nav-button fade-in-down-3" id="about">About</li>
+						<li class="nav-button contact-btn fade-in-down-4" id="contact">
+							Contact
+						</li>
 					</ul>
 				</div>
 
@@ -165,11 +184,13 @@
 		<!----- Hero ----->
 		<section class="home-hero">
 			<div class="hero-pattern-bg">
-				<img
-					class="hero-white-wave"
-					src="./assets/images/hero-wave.svg"
-					alt=""
-				/>
+				<div class="hero-white-wave-animation">
+					<img
+						class="hero-white-wave"
+						src="./assets/images/hero-wave.svg"
+						alt=""
+					/>
+				</div>
 			</div>
 
 			<div class="hero-bg-swirls">
@@ -293,8 +314,8 @@
 		<section class="home-skills">
 			<div class="home-skills-container">
 				<div class="skills-and-title-container">
-					<h2 class="section-title orange-bar">What I Do</h2>
-					<div class="skills-container">
+					<h2 class="section-title orange-bar section-fade">What I Do</h2>
+					<div class="skills-container section-fade">
 						<div class="skill">
 							<div class="skill-description">
 								<h3>Development</h3>
@@ -358,9 +379,8 @@
 		<!----- Projects ----->
 		<section class="home-projects">
 			<div class="home-projects-container">
-				<h2 class="section-title pink-bar">Projects</h2>
-
-				<div class="projects-container">
+				<h2 class="section-title pink-bar section-fade">Projects</h2>
+				<div class="projects-container section-fade">
 					<div class="project left-project">
 						<div class="project-rotater">
 							<div class="logo-container">
@@ -563,8 +583,8 @@
 		<section class="home-about">
 			<div class="home-about-container">
 				<div class="about-and-title-container">
-					<h2 class="section-title purple-bar">About</h2>
-					<div class="info-and-portrait-container">
+					<h2 class="section-title purple-bar section-fade">About</h2>
+					<div class="info-and-portrait-container section-fade">
 						<div class="left">
 							<h3 class="about-desc-title">About me</h3>
 
@@ -592,7 +612,7 @@
 						</div>
 					</div>
 
-					<div class="about-site-and-logos-container">
+					<div class="about-site-and-logos-container section-fade">
 						<div class="img-container">
 							<img src="./assets/images/tool-logos.svg" />
 						</div>
@@ -629,7 +649,7 @@
 				/>
 			</div>
 
-			<div class="footer-text">
+			<div class="footer-text section-fade">
 				<div class="footer-text-container">
 					<p class="footer-heading">Interested in collaborating?</p>
 					<p class="footer-sub-heading">
