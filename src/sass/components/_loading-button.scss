@@ -1,5 +1,6 @@
 .main {
 	position: relative;
+	width: 100%;
 }
 
 .loader {
@@ -27,6 +28,7 @@
 	align-items: center;
 	transform: translate3d(-4px, 20px, 0);
 	opacity: 0;
+	
 	span:nth-child(1) {
 		display: block;
 		width: 10px;

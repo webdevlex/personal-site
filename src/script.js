@@ -245,14 +245,13 @@ function getViewportWidth() {
 const fadeInOptions = {
 	root: null,
 	threshold: 0.1,
-	rootMargin: '-150px',
+	rootMargin: '0px',
 };
 
 const fadeInObserver = new IntersectionObserver((entries) => {
 	entries.forEach((entry) => {
 		const alreadyFadedIn = entry.target.classList.contains('section-fade-in');
 		if (entry.isIntersecting && !alreadyFadedIn) {
-			console.log(entry);
 			entry.target.classList.add('section-fade-in');
 		}
 	});

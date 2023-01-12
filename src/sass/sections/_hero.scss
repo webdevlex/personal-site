@@ -17,6 +17,10 @@ section.home-hero {
     transform: translateY(20px);
     animation: fade-in-up 1s ease-in-out 4.5s forwards;
 
+    .heading{
+        font-size: 50px;
+    }
+
 	.sub-heading {
 		font-family: var(--secondary-font);
 		font-weight: 400;
@@ -48,10 +52,7 @@ section.home-hero {
 	align-items: center;
 	z-index: 3;
 	width: 100%;
-	height: 950px;
-
-    max-width: 3000px;
-    max-height: 950px;
+	height: 100vh;
 	background-color: rgba(0,0,0,0.3);
 	animation: fade-out 0.4s ease-in-out forwards;
 	animation-delay: 3.2s;
@@ -63,9 +64,19 @@ section.home-hero {
     height: 134px;
     animation: shrink 0.4s ease-in-out forwards;
     animation-delay: 3s;
-	margin-bottom: 100px;
     
 }
+
+@media (min-height: 500px) {
+    .intro-container {
+        max-width: 3000px;
+        max-height: 950px;
+    }
+
+    .animated-logo-container{
+        margin-bottom: 100px;
+    }
+  }
 
 .animated-logo-wrapper{
     transform: scale(0.5);
@@ -139,6 +150,12 @@ section.home-hero {
 .filler-4{
     animation: grow 0.3s ease-in-out forwards;
     animation-delay: calc(var(--animation-start) + 0.8s);
+}
+
+@media (min-width: 320px) {
+    .hero-text .heading{
+        font-size: 70px;
+    }
 }
 
 @media (min-width: 768px){

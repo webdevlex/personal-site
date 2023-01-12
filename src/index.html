@@ -125,6 +125,13 @@
 		<section class="home-contact-container">
 			<div class="contact-bg contact-btn"></div>
 			<div class="contact-container hide-contact">
+				<button class="close-contact-button contact-btn" type="button">
+					<div class="lines-wrapper">
+						<div class="top-line"></div>
+						<div class="bottom-line"></div>
+					</div>
+				</button>
+
 				<img
 					class="blobs"
 					src="./assets/images/contact-blobs.svg"
@@ -137,60 +144,55 @@
 					alt=""
 					srcset=""
 				/>
-				<button class="close-contact-button contact-btn" type="button">
-					<div class="lines-wrapper">
-						<div class="top-line"></div>
-						<div class="bottom-line"></div>
-					</div>
-				</button>
+				<div class="contact-content-wrapper">
+					<form action="submit" class="form">
+						<h2 class="contact-title">Let's Talk!</h2>
+						<p>
+							I will get back to you within one to three days. Don't forget to
+							check your spam!
+						</p>
 
-				<form action="submit" class="form">
-					<h2 class="contact-title">Let's Talk!</h2>
-					<p>
-						I will get back to you within one to three days. Don't forget to
-						check your spam!
-					</p>
-
-					<div class="input-container">
-						<span>Name*</span>
-						<input type="text" name="name" />
-					</div>
-					<div class="input-container">
-						<span>Email*</span>
-						<input type="text" name="email" />
-					</div>
-					<div class="input-container">
-						<span>Subject*</span>
-						<input type="text" name="subject" />
-					</div>
-					<div class="input-container textarea-container">
-						<span>Message*</span>
-						<textarea
-							class="input textarea"
-							cols="30"
-							rows="3"
-							name="message"
-						></textarea>
-					</div>
-					<div
-						class="g-recaptcha"
-						data-sitekey="6LcCrFgdAAAAAE_H1ysvuloDRWr0U5E-xlgAVIMN"
-					></div>
-					<div class="main">
-						<button type="button" class="btn-default orange send-button">
-							<i class="fas fa-rocket"></i>Send!
-						</button>
-
-						<div class="loader"></div>
-						<div class="check">
-							<span class="check-one"></span>
-							<span class="check-two"></span>
+						<div class="input-container">
+							<span>Name*</span>
+							<input type="text" name="name" />
 						</div>
-						<div class="exclamation">
-							<i class="fas fa-exclamation"></i>
+						<div class="input-container">
+							<span>Email*</span>
+							<input type="text" name="email" />
 						</div>
-					</div>
-				</form>
+						<div class="input-container">
+							<span>Subject*</span>
+							<input type="text" name="subject" />
+						</div>
+						<div class="input-container textarea-container">
+							<span>Message*</span>
+							<textarea
+								class="input textarea"
+								cols="30"
+								rows="3"
+								name="message"
+							></textarea>
+						</div>
+						<div
+							class="g-recaptcha"
+							data-sitekey="6LcCrFgdAAAAAE_H1ysvuloDRWr0U5E-xlgAVIMN"
+						></div>
+						<div class="main">
+							<button type="button" class="btn-default orange send-button">
+								<i class="fas fa-rocket"></i>Send!
+							</button>
+
+							<div class="loader"></div>
+							<div class="check">
+								<span class="check-one"></span>
+								<span class="check-two"></span>
+							</div>
+							<div class="exclamation">
+								<i class="fas fa-exclamation"></i>
+							</div>
+						</div>
+					</form>
+				</div>
 			</div>
 		</section>
 
