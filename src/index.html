@@ -9,6 +9,12 @@
 		<meta property="og:site_name" content="Web Dev Lex" />
 
 		<title>Alexis Martin Web Developer</title>
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="./assets/images/android-chrome-512x512.png"
+		/>
+
 		<meta property="og:title" content="Alexis Martin Web Developer" />
 		<meta name="twitter:title" content="Alexis Martin Web Developer" />
 
@@ -54,23 +60,30 @@
 				emailjs.init('user_rao3uB9qYKqrBXpkNmVJb');
 			})();
 		</script>
+		<script>
+			history.scrollRestoration = 'manual';
+		</script>
 		<link rel="stylesheet" href="./sass/style.scss" />
 	</head>
 	<body>
-		<div class="intro-container">
-			<div class="animated-logo-container">
-				<img src="./assets/images/logo.svg" class="animated-logo" alt="" />
-				<div class="pillar-container pillar-1">
-					<div class="pillar-filler filler-1"></div>
-				</div>
-				<div class="pillar-container pillar-2">
-					<div class="pillar-filler filler-2"></div>
-				</div>
-				<div class="pillar-container pillar-3">
-					<div class="pillar-filler filler-3"></div>
-				</div>
-				<div class="pillar-container pillar-4">
-					<div class="pillar-filler filler-4"></div>
+		<div class="intro-container-wrapper">
+			<div class="intro-container">
+				<div class="animated-logo-wrapper">
+					<div class="animated-logo-container">
+						<img src="./assets/images/logo.svg" class="animated-logo" alt="" />
+						<div class="pillar-container pillar-1">
+							<div class="pillar-filler filler-1"></div>
+						</div>
+						<div class="pillar-container pillar-2">
+							<div class="pillar-filler filler-2"></div>
+						</div>
+						<div class="pillar-container pillar-3">
+							<div class="pillar-filler filler-3"></div>
+						</div>
+						<div class="pillar-container pillar-4">
+							<div class="pillar-filler filler-4"></div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -187,14 +200,18 @@
 				<div class="hero-white-wave-animation">
 					<img
 						class="hero-white-wave"
-						src="./assets/images/hero-wave.svg"
+						src="./assets/images/hero-wave-bigger.svg"
 						alt=""
 					/>
 				</div>
 			</div>
 
 			<div class="hero-bg-swirls">
-				<img class="swirls" src="./assets/images/hero-bg-swirls.svg" alt="" />
+				<img
+					class="swirls"
+					src="./assets/images/hero-bg-swirls-bigger.svg"
+					alt=""
+				/>
 			</div>
 
 			<div class="hero-text">
@@ -223,7 +240,7 @@
 						alt=""
 					/>
 				</div>
-				<img class="stars" src="./assets/images/hero-stars.svg" alt="" />
+				<img class="stars" src="./assets/images/hero-stars-bigger.svg" alt="" />
 				<div class="shooting-star-container container-1">
 					<img
 						class="shooting-star"
@@ -649,8 +666,8 @@
 				/>
 			</div>
 
-			<div class="footer-text section-fade">
-				<div class="footer-text-container">
+			<div class="footer-text">
+				<div class="footer-text-container section-fade">
 					<p class="footer-heading">Interested in collaborating?</p>
 					<p class="footer-sub-heading">
 						I’m always open to discussing development work or partnership
