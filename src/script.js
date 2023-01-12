@@ -7,13 +7,11 @@ function getElement(className) {
 }
 
 toggleLockScroll();
-setTimeout(test, 6000);
+setTimeout(clearAnimation, 4000);
 
-function test() {
+function clearAnimation() {
 	document.querySelector('.intro-container').remove();
 	toggleLockScroll();
-	toggleSlideIn();
-	toggleSlideIn();
 }
 
 // Setup mobile menu button to open on click
