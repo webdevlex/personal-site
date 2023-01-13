@@ -42,7 +42,7 @@ section.home-contact-container {
 		bottom: 20px;
 		border-radius: 35px;
 		border: solid 2px rgb(240, 240, 240);
-		z-index: 0;
+		z-index: 1;
 		pointer-events: none;
 	}
 }
@@ -52,7 +52,7 @@ section.home-contact-container {
 	display: flex;
 	justify-content: center;
 	padding-inline: 10px;
-	padding-top: 50px;
+	padding-top: 80px;
 	padding-bottom: 30px;
 	height: 100%;
 	width: 100%;
@@ -112,6 +112,7 @@ form {
 	height: 650px;
 	width: 80%;
 	overflow: hidden; // MAYBE
+	padding-inline: 6px;
 
 	.contact-title{
 		margin-top: 5px;
@@ -170,15 +171,6 @@ form {
 	transition: all 0.3s ease;
 }
 
-@media (min-height: 750px) {
-	.contact-container::before{
-		display: block;
-	}
-
-	.contact-content-wrapper{
-		overflow-y: hidden;
-	}
-}
 
 @media (min-width: 320px) {
 	.contact-title{
@@ -197,6 +189,10 @@ form {
 }
 
 @media (min-width: 420px) {
+	.contact-container::before {
+		display: block;
+	}
+
 	.g-recaptcha {
 		transform: scale(1) !important;
 	}
@@ -218,10 +214,24 @@ form {
 		bottom: 35px;
 	}
 	
+	.block-test-top, .block-test-bottom{
+		height: 35px;
+	}
+	
 	.blob-shadows {
 		opacity: 0.5;
 	}
 	.blobs {
 		opacity: 1;
+	}
+}
+
+@media (min-height: 750px) {
+	.contact-container::before{
+		display: block;
+	}
+
+	.contact-content-wrapper{
+		overflow-y: hidden;
 	}
 }
