@@ -4,7 +4,7 @@
 	span {
 		color: var(--red);
 	}
-	&::after {
+	&::before {
 		border-bottom: 1px solid var(--red) !important;
 	}
 }
@@ -64,7 +64,7 @@
 }
 
 @media (min-width: 458px) {
-	.input-container::after {
+	.input-container::before {
 		bottom: -1px;
 	}
 }
