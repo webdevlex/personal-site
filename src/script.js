@@ -7,7 +7,8 @@ function getElement(className) {
 }
 
 toggleLockScroll();
-setTimeout(clearAnimation, 4000);
+// setTimeout(clearAnimation, 4000);
+setTimeout(clearAnimation, 0);
 
 function clearAnimation() {
 	document.querySelector('.intro-container').remove();
@@ -441,3 +442,14 @@ function failedAnimation() {
 	loader.classList.add('failed');
 	slideIn.classList.add('errors');
 }
+
+// --------------- Additional Project ---------------
+const additionalProjectsContainer = document.querySelector(
+	'.additional-projects-container'
+);
+const additionalProjectsButton = document.querySelector(
+	'.additional-project-button'
+);
+additionalProjectsButton.addEventListener('click', () => {
+	additionalProjectsContainer.classList.toggle('show-additional-projects');
+});
