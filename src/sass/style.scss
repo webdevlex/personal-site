@@ -1,18 +1,3 @@
 @use 'base';
 @use 'components';
 @use 'sections';
-
-// Experimental
-.test-button-up{
-    position: fixed;
-    z-index: 20;
-    display: none;
-}
-
-.test-button-down{
-    position: fixed;
-    z-index: 20;
-    top: 40px;
-    display: none;
-}
-
