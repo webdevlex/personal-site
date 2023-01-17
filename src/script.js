@@ -452,4 +452,5 @@ const additionalProjectsButton = document.querySelector(
 );
 additionalProjectsButton.addEventListener('click', () => {
 	additionalProjectsContainer.classList.toggle('show-additional-projects');
+	additionalProjectsButton.classList.toggle('flip-button');
 });
