@@ -4,7 +4,8 @@ section.home-projects {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	padding-block: var(--sections-padding-block);
+	padding-top: var(--sections-padding-block);
+	margin-bottom: 80px;
 
 	.home-projects-container {
 		@include center-children-vir;
@@ -32,4 +33,12 @@ section.home-projects {
 
 .pink-bar::before{
 	background-color: var(--pink);
+}
+
+
+
+@media (min-width: 576px) {
+	section.home-projects {
+		margin-bottom: 0px;
+	}
 }

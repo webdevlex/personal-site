@@ -450,7 +450,18 @@ const additionalProjectsContainer = document.querySelector(
 const additionalProjectsButton = document.querySelector(
 	'.additional-project-button'
 );
+const arrowIcon = document.querySelector('.icon-wrapper');
+
+const additionalProjectButtonText = document.querySelector(
+	'.more-projects-text'
+);
+
 additionalProjectsButton.addEventListener('click', () => {
 	additionalProjectsContainer.classList.toggle('show-additional-projects');
-	additionalProjectsButton.classList.toggle('flip-button');
+	arrowIcon.classList.toggle('flip-button');
+	if (additionalProjectButtonText.innerHTML == '') {
+		additionalProjectButtonText.innerHTML = 'MORE';
+	} else {
+		additionalProjectButtonText.innerHTML = '';
+	}
 });
