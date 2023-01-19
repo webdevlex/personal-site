@@ -204,12 +204,15 @@ projects.forEach((project) => {
 });
 
 function handleProjectClicked(e) {
+	console.log('hello');
 	const viewportWidth = getViewportWidth();
 	const projectClicked = e.target;
 	const centerProjectClicked =
 		projectClicked.classList.contains('center-project');
+	const additionalProjectClicked =
+		projectClicked.classList.contains('additional-project');
 
-	if (viewportWidth < 576 || centerProjectClicked) {
+	if (viewportWidth < 576 || centerProjectClicked || additionalProjectClicked) {
 		toggleRotate(projectClicked);
 	} else {
 		const leftProjectClicked =
