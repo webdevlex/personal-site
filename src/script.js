@@ -7,7 +7,7 @@ function getElement(className) {
 }
 
 toggleLockScroll();
-setTimeout(clearAnimation, 4000);
+setTimeout(clearAnimation, 6000);
 
 function clearAnimation() {
 	document.querySelector('.intro-container').remove();
