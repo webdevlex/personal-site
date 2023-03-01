@@ -2,7 +2,7 @@
 
 This is my personal website and portfolio
 
-<img src="./src/assets/images/homepage.jpeg" alt="homepage" width="800"/>
+<img src="./src/assets/images/homepage.gif" alt="homepage" width="800"/>
 
 ## Built With
 
