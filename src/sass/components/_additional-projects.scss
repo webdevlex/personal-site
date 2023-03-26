@@ -73,9 +73,14 @@
 
 .additional-projects-padding{
     padding-block: calc((100vw - 80vw)/2);
+
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
 }
 
 .additional-projects-container{
+    
     .project {
         @include center-children-hor;
         position: relative;
@@ -84,6 +89,7 @@
         transform-style: preserve-3d;
         margin: 0px;
         background: transparent;
+        
     
     
         .logo-container {
@@ -240,9 +246,10 @@
     .additional-project-button{
         bottom: 0px;
     }
-    
+
     .additional-projects-padding{
         padding-block: 50px;
+        flex-direction: row;
     }
 
 	.additional-projects-container .additional-project {
@@ -298,6 +305,9 @@
 }
 
 @media (min-width: 1200px) {
+    .additional-projects-padding{
+        gap: 50px;
+    }
 	.additional-projects-container .additional-project {
 		.back-title {
 			font-size: 0.016em;
