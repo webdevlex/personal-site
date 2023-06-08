@@ -23,6 +23,29 @@
 	}
 }
 
+.btn-underline {
+	@include center-children-hor;
+	font-family: var(--secondary-font);
+	color: #626881;
+	text-decoration: none;
+	text-transform: uppercase;
+	cursor: pointer;
+	margin-top: 14px;
+	font-size: 0.02em;
+	line-height: 1.5;
+	letter-spacing: 0.5px;
+	color: #626881;
+	text-align: center;
+	pointer-events: auto;
+	transition: all 0.2s;
+
+	border-bottom: 1px solid #626881;
+	&:hover {
+		color: var(--pink);
+		border-color: var(--pink);;
+	}
+}
+
 .purple {
 	background-color: var(--purple);
 }
@@ -33,6 +56,14 @@
 
 .orange {
 	background-color: var(--orange);
+}
+
+.gray{
+	background-color: var(--gray-500);
+	cursor: default;
+	&:hover {
+		transform: none;
+	}
 }
 
 .nav-button {
@@ -100,5 +131,11 @@
 
 	.mobile-menu-button {
 		display: none;
+	}
+}
+
+@media (min-width: 576px) {
+	.btn-underline {
+		font-size: 0.007em;
 	}
 }
