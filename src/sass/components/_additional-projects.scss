@@ -185,11 +185,11 @@
     }
     
     .back-title {
-        font-size: 0.05em;
+        font-size: 0.04em;
         padding-bottom: 1em;
     
         &::before {
-            top: 1.2em;
+            top: 1.5em;
             width: 2em;
             background-color: var(--pink);
         }
@@ -206,7 +206,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         width: 0.5em;
-        height: 0.25em;
+        height: 0.24em;
 
     }
 
@@ -222,13 +222,14 @@
         }
 
         .logo {
-            height: 0.1em;
+            height: 0.08em;
         }
     }
 
     .tool-name {
         margin-top: 1em;
         font-size: 0.03em;
+        white-space: nowrap;
     }
 
     .two-tools{
@@ -258,11 +259,11 @@
 		}
 
 		.back-title {
-			font-size: 0.02em;
+			font-size: 0.015em;
 			padding-bottom: 1em;
 
 			&::before {
-				top: 1.2em;
+				top: 1.8em;
 				width: 2em;
 				background-color: var(--pink);
 			}
@@ -271,17 +272,17 @@
 		.back-description {
 			font-size: 0.012em;
 			width: 25em;
-			padding-inline: 10%;
+			padding-inline: 5%;
 		}
 
 		.tools-container {
 			width: 0.22em;
-			height: 0.1em;
+			height: 0.08em;
 		}
 
 		.tool {
 			.tool-logo .logo {
-				height: 0.04em;
+				height: 0.035em;
 			}
 
 			.tool-name {
@@ -291,11 +292,15 @@
 
 		.back .btn-default {
 			margin-bottom: 0;
-			margin-top: 2em;
+			margin-top: 1.5em;
 			pointer-events: auto;
 			font-size: 0.01em;
 			width: 15em;
 			height: 3.5em;
+		}
+
+        .btn-underline{
+			margin-top: 1.5em;
 		}
 
         .two-tools .tool-logo .logo{
@@ -310,11 +315,11 @@
     }
 	.additional-projects-container .additional-project {
 		.back-title {
-			font-size: 0.016em;
+			font-size: 0.014em;
 			padding-bottom: 1em;
 
 			&::before {
-				top: 1.1em;
+				top: 1.2em;
 				width: 2em;
 				background-color: var(--pink);
 			}
@@ -323,17 +328,17 @@
 		.back-description {
 			font-size: 0.009em;
 			width: 25em;
-			padding-inline: 10%;
+			padding-inline: 5%;
 		}
 
 		.tools-container {
-			width: 0.18em;
-			height: 0.08em;
+			width: 0.16em;
+			height: 0.07em;
 		}
 
 		.tool {
 			.tool-logo .logo {
-				height: 0.03em;
+				height: 0.0275em;
 				
 			}
 

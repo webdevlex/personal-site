@@ -10,13 +10,13 @@ toggleLockScroll();
 setTimeout(clearAnimation, 6000);
 
 function clearAnimation() {
-	document.querySelector('.intro-container').remove();
+	document.querySelector(".intro-container").remove();
 	toggleLockScroll();
 }
 
 // Setup mobile menu button to open on click
-const mobileMenuButton = getElement('.mobile-menu-button');
-mobileMenuButton.addEventListener('click', () => toggleMenu());
+const mobileMenuButton = getElement(".mobile-menu-button");
+mobileMenuButton.addEventListener("click", () => toggleMenu());
 
 let menuOpen = false;
 function toggleMenu() {
@@ -27,22 +27,22 @@ function toggleMenu() {
 }
 
 function toggleFade() {
-	getElement('.navbar-menu').classList.toggle('fade');
+	getElement(".navbar-menu").classList.toggle("fade");
 }
 
 function animateMenuButton() {
-	getElement('.top-line').classList.toggle('animate-top-line');
-	getElement('.bottom-line').classList.toggle('animate-bottom-line');
+	getElement(".top-line").classList.toggle("animate-top-line");
+	getElement(".bottom-line").classList.toggle("animate-bottom-line");
 }
 
 function toggleLockScroll() {
-	let body = document.getElementsByTagName('body')[0];
-	body.classList.toggle('stop-scrolling');
+	let body = document.getElementsByTagName("body")[0];
+	body.classList.toggle("stop-scrolling");
 }
 
 // Setup navigation buttons to scroll to section on click
-const navbar = getElement('.navbar-menu');
-navbar.addEventListener('click', (e) => handleNavbarClick(e.target.id));
+const navbar = getElement(".navbar-menu");
+navbar.addEventListener("click", (e) => handleNavbarClick(e.target.id));
 
 function handleNavbarClick(id) {
 	if (buttonIsScroller(id)) {
@@ -52,7 +52,7 @@ function handleNavbarClick(id) {
 }
 
 function buttonIsScroller(id) {
-	return id !== 'contact';
+	return id !== "contact";
 }
 
 function smoothScrollTo(section) {
@@ -64,15 +64,15 @@ function smoothScrollTo(section) {
 function getPosOf(section) {
 	let element = getElement(section);
 	let pos = element.getBoundingClientRect().top + window.scrollY;
-	let scrollObject = { top: pos, left: 0, behavior: 'smooth' };
+	let scrollObject = { top: pos, left: 0, behavior: "smooth" };
 	return scrollObject;
 }
 
 // Setup contact window buttons to open contact form when clicked
 document
-	.querySelectorAll('.contact-btn')
+	.querySelectorAll(".contact-btn")
 	.forEach((button) =>
-		button.addEventListener('click', () => toggleContactWindow())
+		button.addEventListener("click", () => toggleContactWindow())
 	);
 
 function toggleContactWindow() {
@@ -82,37 +82,37 @@ function toggleContactWindow() {
 }
 
 function toggleSlideIn() {
-	const contactWindow = getElement('.contact-container');
-	if (contactWindow.classList.contains('hide-contact')) {
-		contactWindow.classList.remove('hide-contact');
-		contactWindow.classList.add('slide-in');
+	const contactWindow = getElement(".contact-container");
+	if (contactWindow.classList.contains("hide-contact")) {
+		contactWindow.classList.remove("hide-contact");
+		contactWindow.classList.add("slide-in");
 	} else {
-		contactWindow.classList.add('hide-contact');
-		contactWindow.classList.remove('slide-in');
+		contactWindow.classList.add("hide-contact");
+		contactWindow.classList.remove("slide-in");
 	}
 }
 
 function toggleBackground() {
-	getElement('.contact-bg').classList.toggle('show-bg');
+	getElement(".contact-bg").classList.toggle("show-bg");
 }
 
 // Setup projects carousel to shift left or right on click
 document
-	.querySelectorAll('.left-scroller')
-	.forEach((scroller) => scroller.addEventListener('click', () => shiftLeft()));
+	.querySelectorAll(".left-scroller")
+	.forEach((scroller) => scroller.addEventListener("click", () => shiftLeft()));
 document
-	.querySelectorAll('.right-scroller')
+	.querySelectorAll(".right-scroller")
 	.forEach((scroller) =>
-		scroller.addEventListener('click', () => shiftRight())
+		scroller.addEventListener("click", () => shiftRight())
 	);
 
 function shiftLeft() {
 	// rotateIfLogoNotFacingUser();
 	temporarlyTurnOffPointerEvents();
 
-	const leftProject = getElement('.left-project');
-	const centerProject = getElement('.center-project');
-	const rightProject = getElement('.right-project');
+	const leftProject = getElement(".left-project");
+	const centerProject = getElement(".center-project");
+	const rightProject = getElement(".right-project");
 
 	shiftLeftProjectToCenter(leftProject);
 	shiftCenterProjectToRight(centerProject);
@@ -120,36 +120,36 @@ function shiftLeft() {
 }
 
 function rotateIfLogoNotFacingUser() {
-	const centerProject = document.querySelector('.center-project');
-	const logoFacingUser = centerProject.getAttribute('isLogoFacingUser');
+	const centerProject = document.querySelector(".center-project");
+	const logoFacingUser = centerProject.getAttribute("isLogoFacingUser");
 
-	if (logoFacingUser === 'false') {
+	if (logoFacingUser === "false") {
 		toggleRotate(centerProject);
 	}
 }
 
 function shiftLeftProjectToCenter(leftProject) {
-	leftProject.classList.remove('left-project');
-	leftProject.classList.add('center-project');
+	leftProject.classList.remove("left-project");
+	leftProject.classList.add("center-project");
 }
 
 function shiftCenterProjectToRight(centerProject) {
-	centerProject.classList.remove('center-project');
-	centerProject.classList.add('right-project');
+	centerProject.classList.remove("center-project");
+	centerProject.classList.add("right-project");
 }
 
 function shiftRightProjectToLeft(rightProject) {
-	rightProject.classList.remove('right-project');
-	rightProject.classList.add('left-project');
+	rightProject.classList.remove("right-project");
+	rightProject.classList.add("left-project");
 }
 
 function shiftRight() {
 	// rotateIfLogoNotFacingUser();
 	temporarlyTurnOffPointerEvents();
 
-	const leftProject = getElement('.left-project');
-	const centerProject = getElement('.center-project');
-	const rightProject = getElement('.right-project');
+	const leftProject = getElement(".left-project");
+	const centerProject = getElement(".center-project");
+	const rightProject = getElement(".right-project");
 
 	shiftLeftProjectToRight(leftProject);
 	shiftCenterProjectToLeft(centerProject);
@@ -157,18 +157,18 @@ function shiftRight() {
 }
 
 function shiftLeftProjectToRight(leftProject) {
-	leftProject.classList.remove('left-project');
-	leftProject.classList.add('right-project');
+	leftProject.classList.remove("left-project");
+	leftProject.classList.add("right-project");
 }
 
 function shiftCenterProjectToLeft(centerProject) {
-	centerProject.classList.remove('center-project');
-	centerProject.classList.add('left-project');
+	centerProject.classList.remove("center-project");
+	centerProject.classList.add("left-project");
 }
 
 function shiftRightProjectToCenter(rightProject) {
-	rightProject.classList.remove('right-project');
-	rightProject.classList.add('center-project');
+	rightProject.classList.remove("right-project");
+	rightProject.classList.add("center-project");
 }
 
 function temporarlyTurnOffPointerEvents() {
@@ -178,46 +178,46 @@ function temporarlyTurnOffPointerEvents() {
 
 function turnOffPointerEvents() {
 	document
-		.querySelectorAll('.scroll-button')
-		.forEach((button) => (button.style.pointerEvents = 'none'));
+		.querySelectorAll(".scroll-button")
+		.forEach((button) => (button.style.pointerEvents = "none"));
 	document
-		.querySelectorAll('.scroller')
-		.forEach((scroller) => (scroller.style.pointerEvents = 'none'));
+		.querySelectorAll(".scroller")
+		.forEach((scroller) => (scroller.style.pointerEvents = "none"));
 }
 
 function turnOnPointerEvents() {
 	document
-		.querySelectorAll('.scroll-button')
-		.forEach((button) => (button.style.pointerEvents = 'all'));
+		.querySelectorAll(".scroll-button")
+		.forEach((button) => (button.style.pointerEvents = "all"));
 	document
-		.querySelectorAll('.scroller')
-		.forEach((scroller) => (scroller.style.pointerEvents = 'all'));
+		.querySelectorAll(".scroller")
+		.forEach((scroller) => (scroller.style.pointerEvents = "all"));
 }
 
 // Setup center project to rotate on hover and click
-const projects = document.querySelectorAll('.project');
+const projects = document.querySelectorAll(".project");
 
 projects.forEach((project) => {
-	project.setAttribute('isLogoFacingUser', true);
-	project.addEventListener('click', (e) => handleProjectClicked(e));
+	project.setAttribute("isLogoFacingUser", true);
+	project.addEventListener("click", (e) => handleProjectClicked(e));
 });
 
 function handleProjectClicked(e) {
-	console.log('hello');
+	console.log("hello");
 	const viewportWidth = getViewportWidth();
 	const projectClicked = e.target;
 	const centerProjectClicked =
-		projectClicked.classList.contains('center-project');
+		projectClicked.classList.contains("center-project");
 	const additionalProjectClicked =
-		projectClicked.classList.contains('additional-project');
+		projectClicked.classList.contains("additional-project");
 
 	if (viewportWidth < 576 || centerProjectClicked || additionalProjectClicked) {
 		toggleRotate(projectClicked);
 	} else {
 		const leftProjectClicked =
-			projectClicked.classList.contains('left-project');
+			projectClicked.classList.contains("left-project");
 		const rightProjectClicked =
-			projectClicked.classList.contains('right-project');
+			projectClicked.classList.contains("right-project");
 
 		if (leftProjectClicked) {
 			shiftLeft();
@@ -228,14 +228,14 @@ function handleProjectClicked(e) {
 }
 
 function toggleRotate(element) {
-	const logoFacingUser = element.getAttribute('isLogoFacingUser');
-	if (logoFacingUser == 'true') {
-		element.setAttribute('isLogoFacingUser', false);
+	const logoFacingUser = element.getAttribute("isLogoFacingUser");
+	if (logoFacingUser == "true") {
+		element.setAttribute("isLogoFacingUser", false);
 	} else {
-		element.setAttribute('isLogoFacingUser', true);
+		element.setAttribute("isLogoFacingUser", true);
 	}
-	const elementToRotate = element.querySelector('.project-rotater');
-	elementToRotate.classList.toggle('rotate');
+	const elementToRotate = element.querySelector(".project-rotater");
+	elementToRotate.classList.toggle("rotate");
 }
 
 function getViewportWidth() {
@@ -248,34 +248,34 @@ function getViewportWidth() {
 const fadeInOptions = {
 	root: null,
 	threshold: 0.1,
-	rootMargin: '0px',
+	rootMargin: "0px",
 };
 
 const fadeInObserver = new IntersectionObserver((entries) => {
 	entries.forEach((entry) => {
-		const alreadyFadedIn = entry.target.classList.contains('section-fade-in');
+		const alreadyFadedIn = entry.target.classList.contains("section-fade-in");
 		if (entry.isIntersecting && !alreadyFadedIn) {
-			entry.target.classList.add('section-fade-in');
+			entry.target.classList.add("section-fade-in");
 		}
 	});
 }, fadeInOptions);
 
-const fadeInSection = document.querySelectorAll('.section-fade');
+const fadeInSection = document.querySelectorAll(".section-fade");
 fadeInSection.forEach((el) => fadeInObserver.observe(el));
 
 // Setup up bottom right contact button to show when no other contact buttons are on screen
-const intersectionButtons = document.querySelectorAll('.intersection');
-const contactButton = getElement('.contact-button');
+const intersectionButtons = document.querySelectorAll(".intersection");
+const contactButton = getElement(".contact-button");
 
 const options = {
 	root: null,
 	threshold: 0,
-	rootMargin: '0px',
+	rootMargin: "0px",
 };
 
 const observer = new IntersectionObserver((entries, observer) => {
 	entries.forEach((entry) => {
-		contactButton.classList.toggle('show-contact-button');
+		contactButton.classList.toggle("show-contact-button");
 	});
 }, options);
 
@@ -285,15 +285,15 @@ intersectionButtons.forEach((button) => {
 
 // Setup for send email button
 document
-	.querySelector('.send-button')
-	.addEventListener('click', () => attemptToSendEmail());
+	.querySelector(".send-button")
+	.addEventListener("click", () => attemptToSendEmail());
 
 function attemptToSendEmail() {
-	const form = document.querySelector('.form');
-	const name = form.elements['name'].value;
-	const email = form.elements['email'].value;
-	const subject = form.elements['subject'].value;
-	const message = form.elements['message'].value;
+	const form = document.querySelector(".form");
+	const name = form.elements["name"].value;
+	const email = form.elements["email"].value;
+	const subject = form.elements["subject"].value;
+	const message = form.elements["message"].value;
 	let fields = { name, email, subject, message };
 	let errorsExist = false;
 
@@ -309,7 +309,7 @@ function attemptToSendEmail() {
 	if (!errorsExist) {
 		sendEmail(fields);
 	} else {
-		messageFailed({ status: 0, text: 'Missing required field' });
+		messageFailed({ status: 0, text: "Missing required field" });
 	}
 }
 
@@ -320,7 +320,7 @@ function validateField(field) {
 	if (!value) {
 		markFieldAsError(fieldName);
 		return fieldName;
-	} else if (fieldName === 'email' && !validateEmail(value)) {
+	} else if (fieldName === "email" && !validateEmail(value)) {
 		markFieldAsError(fieldName);
 		return fieldName;
 	} else {
@@ -335,29 +335,29 @@ function validateEmail(email) {
 }
 
 function markFieldAsError(fieldName) {
-	const form = document.querySelector('.form');
-	form.elements[fieldName].parentNode.classList.add('error');
+	const form = document.querySelector(".form");
+	form.elements[fieldName].parentNode.classList.add("error");
 }
 
 function removeError(fieldName) {
-	const form = document.querySelector('.form');
-	form.elements[fieldName].parentNode.classList.remove('error');
+	const form = document.querySelector(".form");
+	form.elements[fieldName].parentNode.classList.remove("error");
 }
 
 function sendEmail(params) {
-	emailjs.send('default_service', 'template_vr6w86n', params).then(
+	emailjs.send("default_service", "template_vr6w86n", params).then(
 		(response) => messageSuccess(response, params),
 		(error) => messageFailed(error)
 	);
 }
 
 function startLoadingAnimation() {
-	let loader = document.querySelector('.loader');
-	loader.classList.add('active');
+	let loader = document.querySelector(".loader");
+	loader.classList.add("active");
 }
 
 function messageSuccess(response, params) {
-	console.log('Email sent successfully!');
+	console.log("Email sent successfully!");
 	sendNotification(params);
 	delaySuccessAnimation(0);
 	delayCloseContactWindow(1500);
@@ -366,9 +366,9 @@ function messageSuccess(response, params) {
 }
 
 function sendNotification(params) {
-	emailjs.send('default_service', 'template_tzksk1i', params).then(
-		() => console.log('Notification sent successfully!'),
-		() => console.log('Notification failed to send...')
+	emailjs.send("default_service", "template_tzksk1i", params).then(
+		() => console.log("Notification sent successfully!"),
+		() => console.log("Notification failed to send...")
 	);
 }
 
@@ -379,10 +379,10 @@ function delaySuccessAnimation(delay) {
 }
 
 function successAnimation() {
-	let loader = document.querySelector('.loader');
-	let check = document.querySelector('.check');
-	loader.classList.add('success');
-	check.classList.add('active');
+	let loader = document.querySelector(".loader");
+	let check = document.querySelector(".check");
+	loader.classList.add("success");
+	check.classList.add("active");
 }
 
 function delayCloseContactWindow(delay) {
@@ -398,11 +398,11 @@ function delayClearInputs(delay) {
 }
 
 function clearInputs() {
-	const form = document.querySelector('.form');
-	form.elements['name'].value = '';
-	form.elements['email'].value = '';
-	form.elements['subject'].value = '';
-	form.elements['message'].value = '';
+	const form = document.querySelector(".form");
+	form.elements["name"].value = "";
+	form.elements["email"].value = "";
+	form.elements["subject"].value = "";
+	form.elements["message"].value = "";
 }
 
 function delayResetAnimation(delay) {
@@ -412,21 +412,21 @@ function delayResetAnimation(delay) {
 }
 
 function resetAnimation() {
-	const loader = document.querySelector('.loader');
-	const exclamation = document.querySelector('.exclamation');
-	const check = document.querySelector('.check');
-	const contactWindow = document.querySelector('.contact-container');
+	const loader = document.querySelector(".loader");
+	const exclamation = document.querySelector(".exclamation");
+	const check = document.querySelector(".check");
+	const contactWindow = document.querySelector(".contact-container");
 
-	loader.classList.remove('active');
-	loader.classList.remove('success');
-	loader.classList.remove('failed');
-	exclamation.classList.remove('active');
-	check.classList.remove('active');
-	contactWindow.classList.remove('errors');
+	loader.classList.remove("active");
+	loader.classList.remove("success");
+	loader.classList.remove("failed");
+	exclamation.classList.remove("active");
+	check.classList.remove("active");
+	contactWindow.classList.remove("errors");
 }
 
 function messageFailed(error) {
-	console.log('Email failed to send...');
+	console.log("Email failed to send...");
 	delayFailedAnimation(10);
 }
 
@@ -437,33 +437,33 @@ function delayFailedAnimation(delay) {
 }
 
 function failedAnimation() {
-	let slideIn = document.querySelector('.slide-in');
-	let loader = document.querySelector('.loader');
-	let exclamation = document.querySelector('.exclamation');
-	exclamation.classList.add('active');
-	loader.classList.add('failed');
-	slideIn.classList.add('errors');
+	let slideIn = document.querySelector(".slide-in");
+	let loader = document.querySelector(".loader");
+	let exclamation = document.querySelector(".exclamation");
+	exclamation.classList.add("active");
+	loader.classList.add("failed");
+	slideIn.classList.add("errors");
 }
 
 // --------------- Additional Project ---------------
 const additionalProjectsContainer = document.querySelector(
-	'.additional-projects-container'
+	".additional-projects-container"
 );
 const additionalProjectsButton = document.querySelector(
-	'.additional-project-button'
+	".additional-project-button"
 );
-const arrowIcon = document.querySelector('.icon-wrapper');
+const arrowIcon = document.querySelector(".icon-wrapper");
 
 const additionalProjectButtonText = document.querySelector(
-	'.more-projects-text'
+	".more-projects-text"
 );
 
-additionalProjectsButton.addEventListener('click', () => {
-	additionalProjectsContainer.classList.toggle('show-additional-projects');
-	arrowIcon.classList.toggle('flip-button');
-	if (additionalProjectButtonText.innerHTML == '') {
-		additionalProjectButtonText.innerHTML = 'MORE';
+additionalProjectsButton.addEventListener("click", () => {
+	additionalProjectsContainer.classList.toggle("show-additional-projects");
+	arrowIcon.classList.toggle("flip-button");
+	if (additionalProjectButtonText.innerHTML == "") {
+		additionalProjectButtonText.innerHTML = "MORE";
 	} else {
-		additionalProjectButtonText.innerHTML = '';
+		additionalProjectButtonText.innerHTML = "";
 	}
 });
