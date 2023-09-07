@@ -1,4 +1,4 @@
-## **Personl Website**
+## **Personal Website**
 
 Welcome to my personal website! This site was built entirely from scratch using HTML, CSS, and JavaScript. I've used a variety of CSS effects throughout the site to make it both visually engaging and user-friendly. From the planet's rotation to the movement of the project section, I've employed a range of techniques to create a unique experience for visitors. Whether you're here to learn more about me and my work, or just to explore the site's design, I hope you enjoy your visit!
 
